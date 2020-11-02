@@ -3,12 +3,26 @@
     {{end}}
 </span>
 
-# Welcome to the Ambassador Dev Portal
+# Customized Ambassador Dev Portal
 
-## Customizing the Portal
+## About this page
 
-This content is fully customizable for your specific needs. 
-For details on customizing the portal, see https://www.getambassador.io/reference/dev-portal.
+This is a customized version of the Dev portal content.
+This has been created with something like:
+
+<pre>
+apiVersion: getambassador.io/v2
+kind: DevPortal
+metadata:
+  name: ambassador
+  namespace: ambassador
+spec:
+  content:
+    url: https://github.com/inercia/devportal-content.git
+  docs:
+  - service: test
+    url: https://api.swaggerhub.com/apis/tribob/hotbot-api/1.0.0-draft-1/swagger.json
+</pre>
 
 ## Available Services
 
